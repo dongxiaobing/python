@@ -7,7 +7,6 @@ import urllib2
 import random
 import time
 import os
-urllib2
 def func1(url,folder_path):
     #if not url.startswith("http://") and not url.stardswith("https://"):
     if not (url.startswith("http://") or url.startswith("https://")):
@@ -25,7 +24,7 @@ def func1(url,folder_path):
 	f2.write(content)
 	f2.close()
     return file_path
-#print func1("http://126.com","/tmp")
+print func1("http://126.com","/tmp")
 
 '''
 2.定义一个func(folder_path)，合并该目录下的所有文件，生成一个all.txt
@@ -45,14 +44,15 @@ def marge(folder_path):
 	    f2=open("all.txt","ab+")
 	    f2.write(content)
 	    f2.close()
-#print marge("/tmp/test")
+print marge("/tmp/test")
+
 '''
 3.定义一个func(url),分析该url内容有多少个链接
 '''
 def func3(url):
     content=urllib2.urlopen(url).read()
     return len(content.split("<a href"))-1
-#print func3("http://www.baidu.com")
+print func3("http://www.baidu.com")
 
 '''
 4.定义一个func(url),获取？后的参数，并返回一个dict
