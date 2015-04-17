@@ -3,7 +3,6 @@ from bs4 import BeautifulSoup
 import urllib2
 url_address="http://www.crummy.com/software/BeautifulSoup/bs4/doc/index.zh.html#xml"
 u=urllib2.urlopen(url_address).read()
-"""
 b=BeautifulSoup(u)
 print b.title
 print b.title.name
@@ -33,7 +32,6 @@ xml_soup = BeautifulSoup('<p class="body strikeout"></p>')
 tag=xml_soup.p
 print tag
 print tag.string
-"""
 markup = "<b><!--Hey, buddy. Want to buy a used parser?--></b>"
 soup = BeautifulSoup(markup)
 comment = soup.b.string
